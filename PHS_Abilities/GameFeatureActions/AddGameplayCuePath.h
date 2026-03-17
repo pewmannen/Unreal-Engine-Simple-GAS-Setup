@@ -10,7 +10,7 @@
  * 
  */
 UCLASS(meta = (DisplayName = "Add Gameplay Cue Path")) // THIS makes it show up in the GameFeature fragment dropdown
-class PROJECTHELLSHIFT_API UAddGameplayCuePath : public UGameFeatureAction
+class PHS_API UAddGameplayCuePath : public UGameFeatureAction
 {
 	GENERATED_BODY()
 

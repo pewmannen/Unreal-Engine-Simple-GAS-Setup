@@ -3,10 +3,6 @@
 #include "AbilitySystemComponent.h"
 #include "GameplayEffect.h"
 
-// ---------------------------------------------------------------------------
-// FPHSAbilitySet_GrantedHandles
-// ---------------------------------------------------------------------------
-
 void FPHSAbilitySet_GrantedHandles::AddAbilitySpecHandle(const FGameplayAbilitySpecHandle& Handle)
 {
 	if (Handle.IsValid())
@@ -78,10 +74,6 @@ void FPHSAbilitySet_GrantedHandles::TakeFromAbilitySystem(UAbilitySystemComponen
 	GrantedAttributeSets.Reset();
 }
 
-// ---------------------------------------------------------------------------
-// UPHSAbilitySet
-// ---------------------------------------------------------------------------
-
 UPHSAbilitySet::UPHSAbilitySet(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
@@ -104,7 +96,7 @@ void UPHSAbilitySet::GiveToAbilitySystem(UAbilitySystemComponent* ASC,
 		return;
 	}
 
-	// --- Attribute Sets ---
+	// Attribute Sets
 	for (const FPHSAbilitySet_AttributeSet& Entry : GrantedAttributes)
 	{
 		if (!IsValid(Entry.AttributeSet))
@@ -126,7 +118,7 @@ void UPHSAbilitySet::GiveToAbilitySystem(UAbilitySystemComponent* ASC,
 			*GetName(), *GetNameSafe(NewSet));
 	}
 
-	// --- Gameplay Abilities ---
+	// Gameplay Abilities
 	for (const FPHSAbilitySet_GameplayAbility& Entry : GrantedGameplayAbilities)
 	{
 		if (!IsValid(Entry.Ability))
@@ -164,7 +156,7 @@ void UPHSAbilitySet::GiveToAbilitySystem(UAbilitySystemComponent* ASC,
 			Spec.InputID);
 	}
 
-	// --- Gameplay Effects ---
+	// Gameplay Effects
 	for (const FPHSAbilitySet_GameplayEffect& Entry : GrantedGameplayEffects)
 	{
 		if (!IsValid(Entry.GameplayEffect))

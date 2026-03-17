@@ -42,7 +42,6 @@ void UAbilityInputBindingComponent::BeginPlay()
 	}
 
 	// Timer fallback: covers the gap between possession and InputComponent readiness.
-	// Motion's own components use the same 0.1s retry pattern.
 	if (UWorld* World = GetWorld())
 	{
 		World->GetTimerManager().SetTimer(

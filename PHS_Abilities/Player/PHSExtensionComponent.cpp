@@ -124,7 +124,7 @@ UAbilitySystemComponent* UPHSExtensionComponent::GetASC() const
 		return ASI->GetAbilitySystemComponent();
 	}
 
-	// Fallback: global scan. Handles third-party plugins (e.g. Motion marketplace)
+	// Fallback: global scan. Handles third-party plugins
 	// that have an ASC on the actor but don't implement IAbilitySystemInterface
 	// in a way that's visible from our module.
 	return UAbilitySystemGlobals::GetAbilitySystemComponentFromActor(Owner);

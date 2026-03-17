@@ -12,7 +12,7 @@ GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
 GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 
 UCLASS(Blueprintable)
-class PROJECTHELLSHIFT_API UAbilitySystem_BaseAttributeSet : public UAttributeSet
+class PHS_API UAbilitySystem_BaseAttributeSet : public UAttributeSet
 {
 	GENERATED_BODY()
 
