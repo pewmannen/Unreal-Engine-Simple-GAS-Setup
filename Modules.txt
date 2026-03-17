@@ -1,0 +1,15 @@
+Place within your PublicDependencyModuleNames in your projects Build.cs
+
+
+// GAS
+"GameplayAbilities",
+"GameplayTasks",
+
+// TAGS — needed for FGameplayTag, FGameplayTagContainer
+"GameplayTags",
+
+// GameFeature Actions
+"GameFeatures",
+
+// Input
+"EnhancedInput"
